@@ -1,0 +1,44 @@
+.navbar {
+  display: flex;
+
+  background-color: rgba(221, 22, 122, 0.6);
+  width: 80%;
+  margin: 0% 7%;
+  justify-content: flex-start;
+  border: 50px;
+
+  padding: 5px 5px;
+  border-radius: 4px;
+
+  flex-direction: row;
+}
+
+.Link {
+  display: flex;
+
+  background-color: rgba(248, 165, 197, 0.918);
+  margin: 5px;
+  text-decoration: none;
+  color: purple;
+  border: 100px;
+  padding: 5px 10px;
+  flex-direction: row;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.Link:hover {
+  background-color: rgba(144, 22, 192);
+  color: white;
+}
+@media only screen and (max-width: 600px) {
+  .navbar {
+    font-size: 10px;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 0% 0%;
+    border-radius: 0px;
+  }
+  .Link {
+    font-size: 15px;
+  }
+}
