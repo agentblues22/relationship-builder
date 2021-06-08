@@ -34,7 +34,7 @@
 label {
   justify-content: flex-start;
   display: flex;
-  color: white;
+  color: black;
   flex-direction: column;
   padding: 10px 10px;
   margin: 5px 2px;
@@ -61,14 +61,14 @@ button:hover {
 }
 .container1 {
   display: flex;
-  color: white;
+  color: black;
   justify-content: space-around;
-  background-color: rgba(218, 183, 87, 0.3);
+  background-color: rgba(255, 255, 255, 0.552);
   width: 30%;
   border: 50px;
   margin: 5% 8%;
   padding: 20px 20px;
-  border-radius: 55px;
+  border-radius: 10px;
   flex-direction: column;
 }
 
@@ -76,12 +76,12 @@ button:hover {
   display: flex;
   color: white;
 
-  background-color: rgba(218, 183, 87, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
 
   border: 50px;
   margin: 5% 8%;
   padding: 20px 20px;
-  border-radius: 55px;
+  border-radius: 10px;
   flex-direction: row;
 }
 .container3 {
