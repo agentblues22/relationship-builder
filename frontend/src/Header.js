@@ -21,7 +21,11 @@ class Header extends Component{
   }
   handleSubmit=(event)=>{
     
-    axios.get("/user",{ params:{distr : this.state.name}}).then(response =>{
+    axios.post("/user",{ 
+      
+      distr : this.state.name
+    })
+    .then(response =>{
       
       
       this.setState({

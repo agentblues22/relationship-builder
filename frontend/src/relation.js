@@ -50,7 +50,7 @@ class Relation extends Component{
 
   }
   handleSubmit=(event)=>{
-    axios.get("/viewRelation",{ params:{userOne : this.state.user1,userTwo: this.state.user2}}).then(response =>{
+    axios.post("/viewRelation",{userOne : this.state.user1,userTwo: this.state.user2}).then(response =>{
       
         
      this.setState({

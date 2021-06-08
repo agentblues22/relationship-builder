@@ -49,7 +49,7 @@ class Users extends Component{
 
   }
   handleSubmit=(event)=>{
-    axios.get("/addRelation",{ params:{userOne : this.state.user1,userTwo: this.state.user2}}).then(response =>{
+    axios.post("/addRelation",{ userOne : this.state.user1,userTwo: this.state.user2}).then(response =>{
       
      this.setState({
        status: response.data
