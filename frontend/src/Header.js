@@ -29,7 +29,8 @@ class Header extends Component{
       
       
       this.setState({
-       replys:response.data
+       replys:response.data,
+       name: "enter name"
      })
 
      

@@ -1,6 +1,10 @@
 const express = require("express");
-var request = require("request");
+require("./models/db")
+const mongoose= require("mongoose")
+
+const User= mongoose.model("name")
 const app= express()
+
 
 const port =process.env.PORT||8000;
 
@@ -19,20 +23,49 @@ app.post('/user', (req,res )=> {
    res.send("enter a valid user")
    }
    else{
-    users.push(dist);
-    res.send("successfully added user")
-     }
+    insertRecord(req,res)
+     
+     }}
 
   
 
 
-}) ;
+) ;
+function insertRecord(req,res){
+    var userz =new User();
+    userz.name= req.body.distr;
+    userz.save((err,doc)=>{
+        if(!err){
+            console.log("added")
+            res.send("added")
+        }
+        else{
+            console.log("error")
+            res.send("failed")
+        }
+    })
+
+}
 
 app.get('/addUser', (req,res )=> {
+    User.find({},function(err,guys){
+        if(!err){
+            len=guys.length
+            for(i=0;i<len;i++){
+                users.push(guys[i].name)
+                
+
+            }
+        }
+        else{
+            console.log("error")
+        }
+    })
     
     
    
    res.send(users)
+   users=[]
 
 }) ;
 

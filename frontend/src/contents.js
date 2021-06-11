@@ -15,7 +15,7 @@ class Contentr extends React.Component{
           <div class="container1">enter a valid user</div>
         )
       }
-      else if(this.props.repl=="successfully added user"){
+      else if(this.props.repl=="added"){
 
         return(
           <div class="container1">user successfully added</div>
